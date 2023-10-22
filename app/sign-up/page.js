@@ -1,4 +1,4 @@
-import SignUpForm from "@/components/form/sign-up-form"
+import SignUpForm from "@/components/sign-up/sign-up-form"
 import Link from "next/link"
 
 export default function SignUp() {

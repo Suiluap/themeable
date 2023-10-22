@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "playwright test"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.0.2",
@@ -24,6 +25,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.7",
     "autoprefixer": "^10",
     "postcss": "^8",
     "tailwindcss": "^3"

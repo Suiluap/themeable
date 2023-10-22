@@ -1,3 +1,5 @@
+import FaqItem from "@/components/faq/faq-item"
+
 export default function Faq() {
   return (
     <div className='max-w-2xl'>
@@ -5,18 +7,18 @@ export default function Faq() {
         Faq
       </h1>
       <ul className="list-disc list-inside">
-        <li className="mb-2">
-          <span className="text-lg">Donec eget ipsum cursus, consequat elit sed, maximus dui?</span>
-          <p className="text-justify ml-1">Curabitur egestas, lacus lobortis cursus accumsan, turpis enim dignissim diam, vel congue ante erat at enim. Quisque eget justo rhoncus enim aliquet efficitur.</p>
-        </li>
-        <li className="mb-2">
-          <span className="text-lg">Sed sed mattis lorem?</span>
-          <p className="text-justify ml-1">Ut faucibus a ex eu ullamcorper. Nunc condimentum est id eros dignissim, ut fermentum urna suscipit. Phasellus commodo felis eu rutrum tristique.</p>
-        </li>
-        <li className="mb-2">
-          <span className="text-lg">Sed interdum augue nec consectetur ornare?</span>
-          <p className="text-justify ml-1">Cras ut ornare enim. Fusce mauris eros, luctus nec ipsum elementum, sagittis mattis leo. Nam ipsum urna, ultricies non enim a, aliquet lacinia risus.</p>
-        </li>
+        <FaqItem 
+          question={"Donec eget ipsum cursus, consequat elit sed, maximus dui?"}
+          answer={"Curabitur egestas, lacus lobortis cursus accumsan, turpis enim dignissim diam, vel congue ante erat at enim. Quisque eget justo rhoncus enim aliquet efficitur."}
+        />
+        <FaqItem 
+          question={"Sed sed mattis lorem?"}
+          answer={"Ut faucibus a ex eu ullamcorper. Nunc condimentum est id eros dignissim, ut fermentum urna suscipit. Phasellus commodo felis eu rutrum tristique."}
+        />
+        <FaqItem 
+          question={"Sed interdum augue nec consectetur ornare?"}
+          answer={"Cras ut ornare enim. Fusce mauris eros, luctus nec ipsum elementum, sagittis mattis leo. Nam ipsum urna, ultricies non enim a, aliquet lacinia risus."}
+        />
       </ul>
     </div>
   )
