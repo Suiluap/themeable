@@ -1,13 +1,12 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function SignUpForm() {
-
   return (
     <form>
       <Label className="sr-only" htmlFor="email">
@@ -22,9 +21,7 @@ export default function SignUpForm() {
         autoCorrect="off"
         className="mb-1 text-base inline-block"
       />
-      <Button className="text-base w-full">
-        Continue 
-      </Button>
+      <Button className="text-base w-full">Continue</Button>
     </form>
-  )
+  );
 }

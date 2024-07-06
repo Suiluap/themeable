@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { Switch } from "@/components/ui/switch"
-import Image from "next/image"
-import { useTheme } from "next-themes"
-import { useState, useEffect } from "react"
+import { Switch } from "@/components/ui/switch";
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-export default function ThemeSwitch({className}) {
+export default function ThemeSwitch({ className }) {
   const { theme, setTheme } = useTheme();
-  const [ isMounted, setMounted ] = useState(false)
+  const [isMounted, setMounted] = useState(false);
 
   function switchTheme() {
-    theme == "dark" ? setTheme("light") : setTheme("dark")
+    theme == "dark" ? setTheme("light") : setTheme("dark");
   }
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   if (!isMounted) {
     return (
@@ -30,7 +30,7 @@ export default function ThemeSwitch({className}) {
           height={20}
           priority
         />
-        <Switch className="mx-1" onClick={switchTheme} disabled/>
+        <Switch className="mx-1" onClick={switchTheme} disabled />
         <Image
           src="/icons/moon.svg"
           alt="Moon"
@@ -40,7 +40,7 @@ export default function ThemeSwitch({className}) {
           priority
         />
       </div>
-    )
+    );
   }
 
   return (
@@ -53,7 +53,11 @@ export default function ThemeSwitch({className}) {
         height={20}
         priority
       />
-      <Switch className="mx-1" onClick={switchTheme} checked={theme == "dark"}/>
+      <Switch
+        className="mx-1"
+        onClick={switchTheme}
+        checked={theme == "dark"}
+      />
       <Image
         src="/icons/moon.svg"
         alt="Moon"
@@ -63,5 +67,5 @@ export default function ThemeSwitch({className}) {
         priority
       />
     </div>
-  )
+  );
 }

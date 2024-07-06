@@ -1,13 +1,11 @@
-import SignUpForm from "@/components/sign-up/sign-up-form"
-import Link from "next/link"
+import SignUpForm from "@/components/sign-up/sign-up-form";
+import Link from "next/link";
 
 export default function SignUp() {
   return (
-    <div className='max-w-sm'>
-      <h1 className="text-3xl text-center mb-4">
-        Sign up
-      </h1>
-      <SignUpForm/>
+    <div className="max-w-sm">
+      <h1 className="text-3xl text-center mb-4">Sign up</h1>
+      <SignUpForm />
       <p className="text-muted-foreground text-xs text-center mt-2">
         By clicking continue, you agree to our<br></br>
         <Link
@@ -26,5 +24,5 @@ export default function SignUp() {
         .
       </p>
     </div>
-  )
+  );
 }
